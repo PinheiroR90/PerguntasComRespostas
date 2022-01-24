@@ -1,0 +1,24 @@
+<%- include ('partials/header.ejs'); %>
+<body>
+    <%- include ('partials/navbar.ejs'); %>
+<div class="container">
+
+    <div class="card">
+        <div class="card-header">
+            <h2> Dúvidas na Bolsa <strong>?</strong> </h2>
+        </div>
+
+        <div class="card-body">
+            <form method="post" action="/salvarperguntas">
+                <label>Título</label>
+                <input type="text" placeholder="Digite assunto aqui" class="form-control" name="titulo" >
+                <br><label>Descrição</label>
+                <textarea  placeholder="Descreva sua dúvida aqui" class="form-control" name="descricao"></textarea><br>
+                <button class="btn btn-dark">Enviar</button>
+            </form>
+        </div>
+    </div>
+</div>
+
+</body>
+<%- include('partials/footer.ejs') %>

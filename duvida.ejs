@@ -1,0 +1,41 @@
+<%- include ('partials/header.ejs'); %>
+<body>
+    <%- include ('partials/navbar.ejs'); %>
+
+    <div class="container">
+
+        <hr>
+        <div class="box">
+        <h6>Anônimo <%= duvidas.id %> :</h6>
+            <h3><%= duvidas.titulo %></h3>
+            <p><%= duvidas.descricao %></p><hr>
+            
+            <!--   //em andamento
+            <form  action="/duvida/delete"  method="delete">
+                <input type="hidden" name="id" value="<%= duvidas.id %>"/>
+                <button class="btn btn-danger">Deletar</button>
+            </form>  -->
+
+            <form method="post" action="/responder">
+                <label><strong>Responda:</strong></label>
+                <textarea name="corpo" class="form-control" placeholder="Digite sua resposta">
+                </textarea><br>
+                <input type="hidden" name="id" value="<%= duvidas.id%>">
+                <button class="btn btn-dark">Responder</button>
+        
+            </form> 
+        </div>
+            <hr>
+            <h3 class="respostas">Respostas:</h3>
+        <div class="box">    
+            <hr>
+            <% respostas.forEach(resposta =>{ %> <hr>
+                <h6>Anônimo <%= resposta.id %> :</h6>
+                  <h5><%= resposta.corpo %></h5>
+            <% }) %>
+        </div>
+    </div>
+   
+
+</body>
+<%- include('partials/footer.ejs') %>

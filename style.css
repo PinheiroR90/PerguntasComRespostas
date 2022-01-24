@@ -1,0 +1,36 @@
+body{
+    background-color: rgba(127, 128, 139, 0.911);
+}
+#img2{
+    text-decoration:none;
+    color: rgb(219, 211, 211);
+
+}
+#img2:hover{
+    color: white;
+}
+h1{
+    text-align: center;
+}
+.rodape{
+    background-color: rgb(68, 69, 70);color: #FFF;
+    position:absolute;
+    bottom:0;;
+    margin-bottom:0px;
+    width: 100%;
+    text-align: center;
+    position:unset;
+    
+
+}
+a{
+    color: #FFF;
+    text-decoration: none;
+}
+.respostas{
+    text-align: center;
+}
+.box{
+    background-color: rgb(140, 139, 143);
+    border-style:dashed;
+}
